@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>iAcademy</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+  <div class="vue" id="app">
+    <section class="jumbotron">
+      <header>
+        <img :src="logoUrl" alt="Logo">
+        <div class="menu">
+          <ul>
+            <li v-for="page in pageMenu">
+              <a v-if="page.name" :href="page.url">{{ page.name }}</a>
+              <a v-if="page.icon" :href="page.url"><i :class="'fas fa-'+page.icon"></i><div class="cart-counter" v-if="page.icon=='shopping-bag'">{{ cartItem }}</div></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <h1>Contemporary ideas</h1>
+      <div class="description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <div class="btn">Register now</div>
+      </div>
+      <div class="slider-menu"></div>
+    </section>
+    <section class="sector">
+      <div class="container">
+        <div class="card" v-for="sector in sectorMenu">
+          <img :src="'img/h5-custom-icon-'+sector.src+'.png'" alt="Icon">
+          <div class="subject">{{ sector.subject }}</div>
+        </div>
+      </div>
+    </section>
+    <section class="mission">
+      <div class="container">
+        <div class="title">The Trusted Name</div>
+        <div class="title">for In-Home Tutoring.</div>
+        <div class="description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        <div class="cta">Learn more</div>
+      </div>
+    </section>
+
+  </div>
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
+</html>
