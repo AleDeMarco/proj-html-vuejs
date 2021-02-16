@@ -100,6 +100,10 @@
   cursor: pointer;
 }
 
+.jumbotron .btn:hover {
+  animation: shakeBtn 2s infinite;
+}
+
 /* SECTOR */
 .sector{
   width: 100%;
@@ -144,4 +148,182 @@
   color: #40c4ff;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+/* PHOTO */
+.photo{
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.photo .container img{
+  width: 100%;
+}
+
+/* POTENTIAL */
+.potential{
+  width: 100%;
+  height: 573px;
+  padding: 50px 0;
+}
+
+.potential .container .half{
+  width: 50%;
+  float: left;
+  padding: 0 20px;
+}
+
+.potential .container .half img{
+  width: 100%;
+}
+
+.potential .container .half .title{
+  font-size: 45px;
+  width: 65%;
+}
+
+.potential .container .half .description{
+  width: 70%;
+  margin-top: 25px;
+  font-size: 20px;
+  color: #959595;
+}
+
+.potential .container .half .stories,
+.potential .container .half .events{
+  display: inline-block;
+  width: 40%;
+}
+
+.potential .container .half .stories .number{
+  margin-top: 25px;
+  font-size: 45px;
+  color: #40c4ff;
+  animation: counterstory 7s infinite alternate ease-in-out;
+  counter-reset: num var(--num);
+}
+
+.potential .container .half .stories .number::after {
+  content: counter(num);
+}
+
+.potential .container .half .events .number{
+  margin-top: 25px;
+  font-size: 45px;
+  color: #40c4ff;
+  animation: counterevent 7s infinite alternate ease-in-out;
+  counter-reset: num var(--num);
+}
+
+.potential .container .half .events .number::after {
+  content: counter(num);
+}
+
+.potential .container .half .stories .text,
+.potential .container .half .events .text{
+  margin-top: 10px;
+  font-size: 20px;
+  color: #40c4ff;
+}
+
+/* REVIEWS */
+.review{
+  width: 100%;
+  padding: 100px 0;
+  background-image: url(../img/h5-parallax-img-1.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white;
+}
+
+.review img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.review .text{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 30px;
+}
+
+.review .name{
+  font-size: 25px;
+  margin-top: 60px;
+}
+
+.review .role{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.review .review-menu{
+  margin-top: 60px;
+}
+
+.review .review-menu i{
+  padding: 0 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.review .review-menu i.active{
+  padding: 0 10px;
+  color: white;
+}
+
+
+
+
+
+
+/* ANIMATION */
+@keyframes shakeBtn {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  5% { transform: translate(-1px, -2px) rotate(-1deg); }
+  10% { transform: translate(-3px, 0px) rotate(1deg); }
+  15% { transform: translate(3px, 2px) rotate(0deg); }
+  20% { transform: translate(1px, -1px) rotate(1deg); }
+  25% { transform: translate(-1px, 2px) rotate(-1deg); }
+  30% { transform: translate(-3px, 1px) rotate(0deg); }
+  35% { transform: translate(3px, 1px) rotate(-1deg); }
+  40% { transform: translate(-1px, -1px) rotate(1deg); }
+  45% { transform: translate(1px, 2px) rotate(0deg); }
+  50% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes counterstory {
+  0% {
+    --num: 0;
+  }
+  75% {
+    --num: 168;
+  }
+  100% {
+    --num: 168;
+  }
+}
+
+@keyframes counterevent {
+  0% {
+    --num: 0;
+  }
+  75% {
+    --num: 347;
+  }
+  100% {
+    --num: 347;
+  }
 }

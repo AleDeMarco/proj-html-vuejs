@@ -51,7 +51,46 @@
         <div class="cta">Learn more</div>
       </div>
     </section>
-
+    <section class="photo">
+      <div class="container">
+        <img src="img/h5-img-1.jpg" alt="Guys">
+      </div>
+    </section>
+    <section class="potential">
+      <div class="container">
+        <div class="half">
+          <img src="img/h5-img-2.jpg" alt="Globe and hands">
+        </div>
+        <div class="half">
+          <div class="title">
+            Empowering Children to Reach Their Potential.
+          </div>
+          <div class="description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+          <div class="stories">
+            <div class="number"></div>
+            <div class="text">User stories</div>
+          </div>
+          <div class="events">
+            <div class="number"></div>
+            <div class="text">Events</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="review">
+      <img :src="reviews[counterReview].src" alt="Author">
+      <div class="text">
+        {{ reviews[counterReview].content }}
+      </div>
+      <div class="name">{{ reviews[counterReview].name }}</div>
+      <div class="role">{{ reviews[counterReview].role }}</div>
+      <div class="review-menu">
+        <i class="fas fa-circle" v-for="(review, index) in reviews" :class="(index == counterReview) ? 'active' : ''" @click="changeReview(index)"></i>
+      </div>
+    </section>
+    
   </div>
   <script src="js/script.js" charset="utf-8"></script>
 </body>
