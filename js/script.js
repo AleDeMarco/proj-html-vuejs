@@ -67,8 +67,26 @@ var app = new Vue({
         src: 6
       }
     ],
+    counterJumbotron: 0,
+    jumbotron:[
+      {
+        src: 'img/h5-slide-1-background.jpg',
+        h1: 'Internet of things',
+        description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+      },
+      {
+        src: 'img/h5-slide-2-background.jpg',
+        h1: 'Machine learning',
+        description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      },
+      {
+        src: 'img/h5-slide-3-background.jpg',
+        h1: 'Contemporary ideas',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      }
+    ],
     counterReview: 0,
-    reviews: [
+    reviews:[
       {
         src: 'img/instructor-img-1.jpg',
         content: '"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."',
@@ -92,6 +110,9 @@ var app = new Vue({
   mounted(){
   },
   methods: {
+    changeJumbotron(index){
+      this.counterJumbotron = index;
+    },
     changeReview(index){
       this.counterReview = index;
     }

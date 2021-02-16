@@ -14,7 +14,7 @@
 </head>
 <body>
   <div class="vue" id="app">
-    <section class="jumbotron">
+    <section class="jumbotron" :style="{'background-image': 'url('+jumbotron[counterJumbotron].src+')'}">
       <header>
         <img :src="logoUrl" alt="Logo">
         <div class="menu">
@@ -26,12 +26,14 @@
           </ul>
         </div>
       </header>
-      <h1>Contemporary ideas</h1>
+      <h1>{{ jumbotron[counterJumbotron].h1 }}</h1>
       <div class="description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        <div class="btn">Register now</div>
+        {{ jumbotron[counterJumbotron].description }}
       </div>
-      <div class="slider-menu"></div>
+      <div class="btn">Register now</div>
+      <div class="slider-menu">
+        <i class="fas fa-circle" v-for="(slide, index) in jumbotron" :class="(index == counterJumbotron) ? 'active' : ''" @click="changeJumbotron(index)"></i>
+      </div>
     </section>
     <section class="sector">
       <div class="container">
@@ -90,7 +92,7 @@
         <i class="fas fa-circle" v-for="(review, index) in reviews" :class="(index == counterReview) ? 'active' : ''" @click="changeReview(index)"></i>
       </div>
     </section>
-    
+
   </div>
   <script src="js/script.js" charset="utf-8"></script>
 </body>
