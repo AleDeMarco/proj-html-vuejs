@@ -1,3 +1,4 @@
+/* GENERAL */
 *{
   padding: 0;
   margin: 0;
@@ -644,17 +645,6 @@ footer .container .contact ul li:hover{
   line-height: 50px;
   cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* ANIMATION */
 @keyframes shakeBtn {

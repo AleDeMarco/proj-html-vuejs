@@ -271,8 +271,6 @@ var app = new Vue({
       return Object.keys(this.rows[0])
     }
   },
-  mounted(){
-  },
   methods: {
     changeJumbotron(index){
       this.counterJumbotron = index;
