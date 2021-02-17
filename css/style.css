@@ -628,7 +628,22 @@ footer .container .contact ul li:hover{
   color: #40c4ff;
 }
 
-
+/* BACK TO TOP */
+.back-top{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #40c4ff;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 50px;
+  cursor: pointer;
+}
 
 
 
